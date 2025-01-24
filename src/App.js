@@ -9,11 +9,11 @@ function App() {
     <>
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<Home />} />
         <Route path="/network" element={<Network />} />
 
         {/* Redirect all unknown routes to Home */}
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<Navigate to="/portfolio" replace />} />
       </Routes>
     </Router>
     </>
