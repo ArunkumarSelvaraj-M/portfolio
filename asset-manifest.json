@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/ArunkumarSelvaraj-M/portfolio/static/css/main.dd9cf098.css",
-    "main.js": "/ArunkumarSelvaraj-M/portfolio/static/js/main.01ffdcc9.js",
-    "static/media/ArunkumarSelvaraj.jpg": "/ArunkumarSelvaraj-M/portfolio/static/media/ArunkumarSelvaraj.0aa2e0ab4931f546aead.jpg",
-    "static/media/kubernetes.png": "/ArunkumarSelvaraj-M/portfolio/static/media/kubernetes.f7821b574352863738f6.png",
-    "static/media/cicd.png": "/ArunkumarSelvaraj-M/portfolio/static/media/cicd.2304ef53eba6b9108907.png",
-    "static/media/automation.png": "/ArunkumarSelvaraj-M/portfolio/static/media/automation.43107297372150e02710.png",
-    "static/media/cloud-infrastructure.png": "/ArunkumarSelvaraj-M/portfolio/static/media/cloud-infrastructure.5737f1474770337b25cb.png",
-    "static/media/monitoring.png": "/ArunkumarSelvaraj-M/portfolio/static/media/monitoring.5c1ba5bea435f2cbd916.png",
-    "index.html": "/ArunkumarSelvaraj-M/portfolio/index.html",
-    "main.dd9cf098.css.map": "/ArunkumarSelvaraj-M/portfolio/static/css/main.dd9cf098.css.map",
-    "main.01ffdcc9.js.map": "/ArunkumarSelvaraj-M/portfolio/static/js/main.01ffdcc9.js.map"
+    "main.css": "/portfolio/static/css/main.dd9cf098.css",
+    "main.js": "/portfolio/static/js/main.e0ebf6f3.js",
+    "static/media/ArunkumarSelvaraj.jpg": "/portfolio/static/media/ArunkumarSelvaraj.0aa2e0ab4931f546aead.jpg",
+    "static/media/kubernetes.png": "/portfolio/static/media/kubernetes.f7821b574352863738f6.png",
+    "static/media/cicd.png": "/portfolio/static/media/cicd.2304ef53eba6b9108907.png",
+    "static/media/automation.png": "/portfolio/static/media/automation.43107297372150e02710.png",
+    "static/media/cloud-infrastructure.png": "/portfolio/static/media/cloud-infrastructure.5737f1474770337b25cb.png",
+    "static/media/monitoring.png": "/portfolio/static/media/monitoring.5c1ba5bea435f2cbd916.png",
+    "index.html": "/portfolio/index.html",
+    "main.dd9cf098.css.map": "/portfolio/static/css/main.dd9cf098.css.map",
+    "main.e0ebf6f3.js.map": "/portfolio/static/js/main.e0ebf6f3.js.map"
   },
   "entrypoints": [
     "static/css/main.dd9cf098.css",
-    "static/js/main.01ffdcc9.js"
+    "static/js/main.e0ebf6f3.js"
   ]
 }
