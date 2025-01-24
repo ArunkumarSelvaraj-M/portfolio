@@ -31,6 +31,7 @@ const Nav = () => {
           <li><a href="#aboutMe" className={activeSection === "aboutMe" ? "active" : ""}>About Me</a></li>
           <li><a href="#whatIDo" className={activeSection === "whatIDo" ? "active" : ""}>What I Do</a></li>
           <li><a href="#resume" className={activeSection === "resume" ? "active" : ""}>Resume</a></li>
+          <li><a href="#work" className={activeSection === "work" ? "active" : ""}>Work</a></li>
           <li><a href="#blogs" className={activeSection === "blogs" ? "active" : ""}>Blogs</a></li>
           <li><a href="#contactMe" className={activeSection === "contactMe" ? "active" : ""}>Contact Me</a></li>
         </ul>

@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
-
+import { motion } from "framer-motion";
 import Nav from "../../Components/Nav/Nav";
+import Card from "../../Components/Card/Card";
+import Modal from "../../Components/Modal/Modal";
 import Skills from "../../Components/Skills/Skills";
+// about me images
 import Arun from "../../Assets/Images/ArunkumarSelvaraj.jpg";
 import Cicd from "../../Assets/Images/cicd.png"
 import CI from "../../Assets/Images/cloud-infrastructure.png"
@@ -9,10 +12,20 @@ import Cloud from "../../Assets/Images/cloud.png"
 import K8s from "../../Assets/Images/kubernetes.png"
 import Monitoring from "../../Assets/Images/monitoring.png"
 import Automation from "../../Assets/Images/automation.png"
+// work images
+import Autocloud from "../../Assets/Images/autocloud.png";
+import Nalanbatters from "../../Assets/Images/nalabatters.png";
+import Tiktik from "../../Assets/Images/tiktik.png";
+import Airbuzz from "../../Assets/Images/Airbuzz.png";
+import Tekfilo from "../../Assets/Images/tekfilo.png";
+// blog images
+import Network from "../../Assets/Images/network.png";
 import "./Home.css"
-import { Link } from 'react-router-dom';
 
 function Home() {
+
+    /* HOME */
+
     const words = ['CI/CD Automation', 'Cloud Infrastructure', 'AWS & GCP Expertise'];
     const [wordIndex, setWordIndex] = useState(0);
     const [text, setText] = useState('');
@@ -41,7 +54,8 @@ function Home() {
         // Add dependencies to the dependency array
     }, [wordIndex, isDeleting, text]);
 
-    // DOWNLOAD CV
+    /* DOWNLOAD CV */
+
     const onButtonClick = () => {
         const pdfUrl = "/ArunkumarSelvaraj.pdf";
         const link = document.createElement("a");
@@ -51,6 +65,97 @@ function Home() {
         link.click();
         document.body.removeChild(link);
     };
+
+    /* WORK CARD DATA */
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedCard, setSelectedCard] = useState(null);
+
+    const workData = [
+        {
+            image: Autocloud,
+            heading: "AutoCloud",
+            paragraph: "This is a sample description for Card 1."
+        },
+        {
+            image: Nalanbatters,
+            heading: "Nalan Batters",
+            paragraph: "This is a sample description for Card 2."
+        },
+        {
+            image: Tiktik,
+            heading: "Tik Tik",
+            paragraph: "This is a sample description for Card 3."
+        },
+        {
+            image: Airbuzz,
+            heading: "Airbuzz",
+            paragraph: "This is a sample description for Card 4."
+        },
+        {
+            image: Tekfilo,
+            heading: "Tekfilo",
+            paragraph: "This is a sample description for Card 5."
+        },
+        {
+            image: "https://via.placeholder.com/250x150",
+            heading: "Labely",
+            paragraph: "This is a sample description for Card 5."
+        },
+        {
+            image: "https://via.placeholder.com/250x150",
+            heading: "Jenkins (SAAS)",
+            paragraph: "This is a sample description for Card 5."
+        },
+    ];
+
+    const openModal = (card) => {
+        setSelectedCard(card);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setSelectedCard(null);
+    };
+
+    //   BLOG CARD
+
+    const blogData = [
+        {
+            image: Network,
+            heading: "Networking in DevOps",
+            paragraph: "Networking is essential in DevOps for enabling communication between applications, services, and infrastructure. A strong understanding of networking helps in deploying secure and high-performing applications.",
+            link: "/network"
+        },
+        {
+            image: Network,
+            heading: "Networking in DevOps",
+            paragraph: "Networking is essential in DevOps for enabling communication between applications, services, and infrastructure. A strong understanding of networking helps in deploying secure and high-performing applications.",
+            link: "/network"
+        },
+        {
+            image: Network,
+            heading: "Networking in DevOps",
+            paragraph: "Networking is essential in DevOps for enabling communication between applications, services, and infrastructure. A strong understanding of networking helps in deploying secure and high-performing applications.",
+            link: "/network"
+        },
+        {
+            image: Network,
+            heading: "Networking in DevOps",
+            paragraph: "Networking is essential in DevOps for enabling communication between applications, services, and infrastructure. A strong understanding of networking helps in deploying secure and high-performing applications.",
+            link: "/network"
+        },
+        {
+            image: Network,
+            heading: "Networking in DevOps",
+            paragraph: "Networking is essential in DevOps for enabling communication between applications, services, and infrastructure. A strong understanding of networking helps in deploying secure and high-performing applications.",
+            link: "/network"
+        },
+    ]
+
+
+
     return (
         <>
             <main>
@@ -58,16 +163,16 @@ function Home() {
                 <section className='home' id='home'>
                     <article>
                         <h2>Hi, I'M A DevOps Engineer</h2>
-                        
+
                         <div className='text'>
                             <h1>{text}</h1>
                         </div>
-                        
+
                         <p>based in Tamilnadu, India.</p>
                         <div className='anhor'>
                             <a href='#blogs'>View My Work</a>
                         </div>
-                        
+
                     </article>
                     <article className='circular--portrait'> <img src={Arun} alt='Arunkumar' /></article>
                 </section>
@@ -76,7 +181,7 @@ function Home() {
                     <p className='head'><span className='headSpan'>About Me</span></p>
                     <h2 className='header'>Know Me More</h2>
                     <article className='summary'>
-                        
+
                         <p className='cont'><p>Hi, I'M <span>Arunkumar Selvaraj</span></p>I am a DevOps Engineer with 3+ years of experience in automating, optimizing, and securing cloud-based infrastructure. My expertise lies in CI/CD pipelines, containerization, orchestration, infrastructure as code (IaC), and cloud platforms like AWS and GCP. I have a strong background in implementing scalable and resilient architectures, ensuring high availability, and improving system reliability. Passionate about streamlining development workflows, I thrive on bridging the gap between development and operations to drive efficiency and innovation.</p>
                         <article>
                             <div className='year'>
@@ -154,9 +259,14 @@ function Home() {
                     <p className='head'><span className='headSpan'>Resume</span></p>
                     <h2 className='header'>A summary of My Resume</h2>
                     <section className='resumeCon'>
-                        <article>
+                        <motion.article
+                            initial={{ opacity: 0, x: -250 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 1, ease: "easeInOut" }}
+                            viewport={{ once: false, amount: 0.2 }} // Repeats animation on scroll
+                        >
                             <h2>My Education</h2>
-                            <div className='education'>
+                            <div className="education">
                                 <div>
                                     <h3>Master in Computer Application</h3>
                                     <p>Anna University / 2019 - 2021</p>
@@ -164,8 +274,13 @@ function Home() {
                                     <hr />
                                 </div>
                             </div>
-                        </article>
-                        <article>
+                        </motion.article>
+                        <motion.article
+                            initial={{ opacity: 0, x: 250 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 1, ease: "easeInOut" }}
+                            viewport={{ once: false, amount: 0.2 }} // Repeats animation on scroll
+                        >
                             <h2>My Experience</h2>
                             <div className='education'>
                                 <div>
@@ -175,8 +290,8 @@ function Home() {
                                     <hr />
                                 </div>
                             </div>
+                        </motion.article>
 
-                        </article>
                     </section>
 
                     <section className='skills'>
@@ -187,44 +302,44 @@ function Home() {
                     </section>
                 </section>
 
+                <section className='work' id='work'>
+                    <p className='head'><span className='headSpan'>Work</span></p>
+                    <h2 className='header'>Some of my most recent Projects</h2>
+                    <section className='workCards'>
+                        {workData.map((card, index) => (
+                            <Card
+                                key={index}
+                                image={card.image}
+                                heading={card.heading}
+                                paragraph={card.paragraph}
+                                onClick={() => openModal(card)} // Open modal on card click
+                            />
+                        ))}
+                    </section>
+                    <Modal
+                        isOpen={isModalOpen}
+                        onClose={closeModal}
+                        image={selectedCard?.image}
+                        heading={selectedCard?.heading}
+                        paragraph={selectedCard?.paragraph}
+                    />
+                </section>
+
                 <section className='blogs' id='blogs'>
                     <p className='head'><span className='headSpan'>Blogs</span></p>
                     <h2 className='header'>Some of my most recent blogs</h2>
-                    <section>
-                        <article>
-                            <img src={Cicd} alt='Network' />
-                            <h3>Network</h3>
-                            <p>Networking is essential in DevOps for enabling communication between applications, services, and infrastructure. A strong understanding of networking helps in deploying secure and high-performing applications.</p>
-                            <Link to="/network" target='__blank'><button>Read More</button></Link>
-
-                        </article>
-                        <article>
-                            <img src={Cloud} alt='cloud infrastructure' />
-                            <h3>Cloud Explanation</h3>
-                            <p>Cloud is you can access any data from the internet</p>
-                        </article>
-                        <article>
-                            <img src={K8s} alt='kubernetes' />
-                            <h3>Kubernetes Explanation</h3>
-                            <p>Kubernetes is a orchestration tool</p>
-                        </article>
-                    </section>
-                    <section>
-                        <article>
-                            <img src={Cicd} alt='Network' />
-                            <h3>Network</h3>
-                            <p>CI/CD is a continuous Integration continuous delivery and continuous deployment</p>
-                        </article>
-                        <article>
-                            <img src={Cloud} alt='cloud infrastructure' />
-                            <h3>Cloud Explanation</h3>
-                            <p>Cloud is you can access any data from the internet</p>
-                        </article>
-                        <article>
-                            <img src={K8s} alt='kubernetes' />
-                            <h3>Kubernetes Explanation</h3>
-                            <p>Kubernetes is a orchestration tool</p>
-                        </article>
+                    <section className='blogsCards'>
+                        {blogData.map((card, index) => (
+                            <Card
+                                key={index}
+                                image={card.image}
+                                heading={card.heading}
+                                paragraph={card.paragraph}
+                                link={card.link}
+                                containerClass="blogsCards"
+                            // onClick={() => openModal(card)} // Open modal on card click
+                            />
+                        ))}
                     </section>
                 </section>
             </main>

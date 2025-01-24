@@ -12,14 +12,6 @@ p,h1,h2,h3{
     padding: 5% 0 5% 0;
 }
 
-.whatIDo,.blogs{
-    padding: 5% 10% 5% 10%;
-    background-color: #f8f9fa;
-}
-.resume{
-    padding: 5% 10% 5% 10%;
-}
-
 .head{
     text-align: center;
     font-size: 16px;
@@ -221,6 +213,11 @@ p,h1,h2,h3{
 
 /* WHAT I DO */
 
+.whatIDo{
+    padding: 5% 10% 5% 10%;
+    background-color: #f8f9fa;
+}
+
 .whatIDo .header{
     text-align: center;
     font-size: 40px;
@@ -230,7 +227,6 @@ p,h1,h2,h3{
 .whatIDo section{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -263,6 +259,10 @@ p,h1,h2,h3{
 
 /* RESUME */
 
+.resume{
+    padding: 5% 10% 5% 10%;
+}
+
 .resume .header{
     text-align: center;
     font-size: 40px;
@@ -288,6 +288,37 @@ p,h1,h2,h3{
 .resume .resumeCon h3{
     font-size: 21px;
     font-weight: 500;
+}
+
+.resume .resumeCon .animationLeft{
+    animation: leftAnim 2s ease 0s 1 alternate both;
+}
+
+@keyframes leftAnim {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.resume .resumeCon .animationRight{
+    animation: rightAnim 2s ease 0s 1 alternate both;
+}
+@keyframes rightAnim {
+	0% {
+		opacity: 0;
+		transform: translateX(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 .resume .resumeCon article h2{
@@ -325,7 +356,30 @@ p,h1,h2,h3{
     color: white;
 }
 
-/* BLOG CARDS */
+/* WORK */
+
+.work{
+    padding: 5% 10% 5% 10%;
+    background-color: #f8f9fa;
+}
+
+.work .header{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.work .workCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;    
+}
+
+/* BLOGS */
+.whatIDo,.blogs{
+    padding: 5% 10% 5% 10%;
+}
 
 .blogs .header{
     text-align: center;
@@ -333,41 +387,9 @@ p,h1,h2,h3{
     font-weight: 600;
 }
 
-.blogs section{
+.blogs .blogsCards{
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 50px;
+    justify-content: space-evenly;    
 }
-
-.blogs article{
-    height: 100%;
-    width: 400px;
-    padding: 10px;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    /* justify-content: center; */
-    align-items: center;
-    border: 1px solid #f5df4e;
-    margin-bottom: 30px;
-    box-shadow: rgba(245, 223, 78, 0.6) 0px 7px 29px 0px;
-}
-
-.blogs article:hover{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
-
-.blogs section article img{
-    height: 200px;
-    width: 200px;
-}
-
-.blogs section article p{
-    text-align: center;
-}
-
-/* .blogs section article button{
-   float: right;
-} */
