@@ -1,0 +1,50 @@
+/* Sticky Navbar */
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #f5df4e;
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+    z-index: 1000; /* Ensures it stays above other content */
+}
+
+nav {
+    width: 40%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 10px 0;  /* Adjusted padding for better spacing */
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    transition: border-bottom 0.3s ease-in-out; /* Smooth hover effect */
+    padding-bottom: 5px;
+}
+
+nav a:hover {
+    border-bottom: 2px solid black; /* More visible hover effect */
+}
+
+/* Highlight the active link */
+nav a.active {
+    border-bottom: 2px solid black;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Smooth scrolling effect */
+html {
+    scroll-behavior: smooth;
+}
