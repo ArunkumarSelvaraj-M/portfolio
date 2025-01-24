@@ -11,6 +11,7 @@
   .skills-container h2 {
     text-align: left;
     font-weight: 600;
+    font-size: 28px;
   }
   
   .skills-container .category h3 {
@@ -20,6 +21,14 @@
   
   .category {
     margin-bottom: 20px;
+  }
+
+  .category h3{
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 10px; 
+    text-decoration-thickness: 2.5px;
+    text-decoration-color: #212529;
   }
 
   .skills-container .category hr {

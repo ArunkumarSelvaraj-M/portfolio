@@ -1,0 +1,47 @@
+/* NetworkingBlog.css */
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-title {
+    text-align: center;
+    color: #333;
+  }
+  
+  .section-title {
+    color: #0056b3;
+    margin-top: 20px;
+  }
+  
+  .subsection-title {
+    color: #007acc;
+    margin-top: 15px;
+  }
+  
+  .blog-text {
+    color: #555;
+  }
+  
+  .blog-list {
+    padding-left: 20px;
+  }
+  
+  .blog-list li {
+    margin-bottom: 8px;
+  }
+  
+  footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px solid #ddd;
+    text-align: center;
+    font-weight: bold;
+  }
+  

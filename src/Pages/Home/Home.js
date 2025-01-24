@@ -57,21 +57,27 @@ function Home() {
                 <Nav />
                 <section className='home' id='home'>
                     <article>
-                        <h2>Hi, I'M Arunkumar Selvaraj</h2>
-                        <h2>I'M A DevOps Engineer</h2>
+                        <h2>Hi, I'M A DevOps Engineer</h2>
+                        
                         <div className='text'>
                             <h1>{text}</h1>
                         </div>
-
+                        
+                        <p>based in Tamilnadu, India.</p>
+                        <div className='anhor'>
+                            <a href='#blogs'>View My Work</a>
+                        </div>
+                        
                     </article>
-                    <article className='circular--portrait'> <img src={Arun} alt='Arunkumar'/></article>
+                    <article className='circular--portrait'> <img src={Arun} alt='Arunkumar' /></article>
                 </section>
 
                 <section className='aboutMe' id="aboutMe">
                     <p className='head'><span className='headSpan'>About Me</span></p>
-                    <h2>Know Me More</h2>
+                    <h2 className='header'>Know Me More</h2>
                     <article className='summary'>
-                        <p className='cont'>I am a DevOps Engineer with 3 years of experience in automating, optimizing, and securing cloud-based infrastructure. My expertise lies in CI/CD pipelines, containerization, infrastructure as code (IaC), and cloud platforms like AWS. I have a strong background in implementing scalable and resilient architectures, ensuring high availability, and improving system reliability. Passionate about streamlining development workflows, I thrive on bridging the gap between development and operations to drive efficiency and innovation.</p>
+                        
+                        <p className='cont'><p>Hi, I'M <span>Arunkumar Selvaraj</span></p>I am a DevOps Engineer with 3+ years of experience in automating, optimizing, and securing cloud-based infrastructure. My expertise lies in CI/CD pipelines, containerization, orchestration, infrastructure as code (IaC), and cloud platforms like AWS and GCP. I have a strong background in implementing scalable and resilient architectures, ensuring high availability, and improving system reliability. Passionate about streamlining development workflows, I thrive on bridging the gap between development and operations to drive efficiency and innovation.</p>
                         <article>
                             <div className='year'>
                                 <span className='circule'></span>
@@ -90,7 +96,7 @@ function Home() {
                         </div>
                         <div>
                             <p>Email</p>
-                            <h3>arunkumarselvaraj.m@gmail.com</h3>
+                            <h3><a href='mailto:arunkumarselvaraj.m@gmail.com'>arunkumarselvaraj.m@gmail.com</a></h3>
                         </div>
                         <div>
                             <p>Name</p>
@@ -106,8 +112,8 @@ function Home() {
                 </section>
 
                 <section className='whatIDo' id='whatIDo'>
-                    <p className='whathead'><span className='whatSpan'>What I Do?</span></p>
-                    <h2>How I can help your next project</h2>
+                    <p className='head'><span className='headSpan'>What I Do?</span></p>
+                    <h2 className='header'>How I can help your next project</h2>
                     <section>
                         <article>
                             <img src={Cicd} alt='Network' />
@@ -145,8 +151,8 @@ function Home() {
                 </section>
 
                 <section className='resume' id='resume'>
-                    <p className='resumehead'><span className='resumeSpan'>Resume</span></p>
-                    <h2 className='dec'>A summary of My Resume</h2>
+                    <p className='head'><span className='headSpan'>Resume</span></p>
+                    <h2 className='header'>A summary of My Resume</h2>
                     <section className='resumeCon'>
                         <article>
                             <h2>My Education</h2>
@@ -155,7 +161,7 @@ function Home() {
                                     <h3>Master in Computer Application</h3>
                                     <p>Anna University / 2019 - 2021</p>
                                     <p>CGPA - 8.5</p>
-                                    <hr/>
+                                    <hr />
                                 </div>
                             </div>
                         </article>
@@ -166,10 +172,10 @@ function Home() {
                                     <h3>DevOps Engineer</h3>
                                     <p>Cloud Garage / 2021 - current</p>
                                     <p>A technology-focused company providing cloud solutions</p>
-                                    <hr/>
+                                    <hr />
                                 </div>
                             </div>
-                            
+
                         </article>
                     </section>
 
@@ -182,15 +188,15 @@ function Home() {
                 </section>
 
                 <section className='blogs' id='blogs'>
-                    <p className='bloghead'><span className='blogSpan'>Blogs</span></p>
-                    <h2>Some of my most recent blogs</h2>
+                    <p className='head'><span className='headSpan'>Blogs</span></p>
+                    <h2 className='header'>Some of my most recent blogs</h2>
                     <section>
                         <article>
                             <img src={Cicd} alt='Network' />
                             <h3>Network</h3>
                             <p>Networking is essential in DevOps for enabling communication between applications, services, and infrastructure. A strong understanding of networking helps in deploying secure and high-performing applications.</p>
                             <Link to="/network" target='__blank'><button>Read More</button></Link>
-                            
+
                         </article>
                         <article>
                             <img src={Cloud} alt='cloud infrastructure' />

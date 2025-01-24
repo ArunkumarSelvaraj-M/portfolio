@@ -57,7 +57,6 @@ const Skills = () => {
       {Object.keys(skillsData).map((category, index) => (
         <div key={index} className="category">
             <h3>{category}</h3>
-            <hr/>
           <div className="skills-grid">
             {skillsData[category].map((skill, i) => (
               <div key={i} className="skill">
