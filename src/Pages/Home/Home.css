@@ -8,10 +8,6 @@ p,h1,h2,h3{
     font-style: normal;
 }
 
-.aboutMe{
-    padding: 5% 0 5% 0;
-}
-
 .head{
     text-align: center;
     font-size: 16px;
@@ -101,6 +97,10 @@ p,h1,h2,h3{
 }
 
 /* ABOUT ME */
+.aboutMe{
+    padding: 1% 0;
+}
+
 .aboutMe .header{
     text-align: center;
     font-size: 40px;
@@ -214,7 +214,7 @@ p,h1,h2,h3{
 /* WHAT I DO */
 
 .whatIDo{
-    padding: 5% 10% 5% 10%;
+    padding: 1% 10%;
     background-color: #f8f9fa;
 }
 
@@ -260,7 +260,7 @@ p,h1,h2,h3{
 /* RESUME */
 
 .resume{
-    padding: 5% 10% 5% 10%;
+    padding: 1% 10%;
 }
 
 .resume .header{
@@ -359,7 +359,7 @@ p,h1,h2,h3{
 /* WORK */
 
 .work{
-    padding: 5% 10% 5% 10%;
+    padding: 1% 10%;
     background-color: #f8f9fa;
 }
 
@@ -377,8 +377,8 @@ p,h1,h2,h3{
 }
 
 /* BLOGS */
-.whatIDo,.blogs{
-    padding: 5% 10% 5% 10%;
+.blogs{
+    padding: 1% 10%;
 }
 
 .blogs .header{
@@ -392,4 +392,34 @@ p,h1,h2,h3{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;    
+}
+
+footer{
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.691);
+}
+
+footer section{
+    display: flex;
+    color: white;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+footer section article span{
+    font-weight: bold;
+}
+
+footer section article h3{
+    text-decoration: underline;
+}
+
+footer section article a{
+    color: #f5df4e;
+}
+
+footer .copyrigthts{
+    color: #f5df4e;
+    background-color: black;
+    text-align: center;
 }

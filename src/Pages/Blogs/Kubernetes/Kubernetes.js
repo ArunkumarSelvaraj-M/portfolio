@@ -86,7 +86,7 @@ const Kubernetes = () => {
         </ul>
       </section>
 
-      <footer>
+      <footer className='footer'>
         <h2 className="section-title">Conclusion</h2>
         <p className="blog-text">
           Kubernetes is a powerful platform for managing containerized applications at scale. Understanding its core components 

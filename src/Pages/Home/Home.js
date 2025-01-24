@@ -342,6 +342,21 @@ function Home() {
                         ))}
                     </section>
                 </section>
+                <footer>
+                    <section>
+                        <article>
+                            <h3>Contact Information</h3>
+                            <p><span>Email: </span><a href='mailto:arunkumarsrlvaraj.m@gmail.com'>arunkumarsrlvaraj.m@gmail.com</a></p>
+                            <p><span>Location: </span>Thedavur, Gangavalli, Salem</p>
+                        </article>
+                        <article>
+                            <h3>Social Media</h3>
+                            <p><span>LinkedIn: </span><a href='mailto:arunkumarsrlvaraj.m@gmail.com'>arunkumarsrlvaraj.m@gmail.com</a></p>
+                            <p><span>GitHub: </span><a href='https://github.com/ArunkumarSelvaraj-M'>ArunkumarSelvaraj-M</a></p>
+                        </article>
+                    </section>
+                    <p className='copyrigthts'>© 2025 Arunkumar Selvaraj. All Rights Reserved.</p>
+                </footer>
             </main>
         </>
     )

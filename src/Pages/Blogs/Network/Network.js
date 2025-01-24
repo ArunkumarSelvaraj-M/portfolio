@@ -80,7 +80,7 @@ const Network = () => {
         </ul>
       </section>
       
-      <footer>
+      <footer className='footer'>
         <h2 className="section-title">Conclusion</h2>
         <p className="blog-text">
           Networking is a crucial skill in DevOps. Understanding core concepts and implementing 
