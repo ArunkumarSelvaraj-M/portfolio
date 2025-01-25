@@ -195,22 +195,32 @@ function Home() {
         <>
             <main>
                 <Nav />
-                <section className='home' id='home'>
-                    <article>
-                        <h2>Hi, I'M A DevOps Engineer</h2>
+                <section className="home" id="home">
+  <article>
+    <h2>Hi, I'M A DevOps Engineer</h2>
 
-                        <div className='text'>
-                            <h1>{text}</h1>
-                        </div>
+    <div className="text">
+      <h1>{text}</h1>
+    </div>
 
-                        <p>based in Tamilnadu, India.</p>
-                        <div className='anhor'>
-                            <a href='#blogs'>View My Work</a>
-                        </div>
+    <p>Based in Tamil Nadu, India.</p>
+    <div className="anchor">
+      <a href="#work">View My Work</a>
+    </div>
+  </article>
 
-                    </article>
-                    <article className='circular--portrait'> <img src={Arun} alt='Arunkumar' /></article>
-                </section>
+  <article className="circular-portrait">
+    <img src={Arun} alt="Arunkumar" />
+  </article>
+
+  {/* Scroll Down Arrow */}
+  <div className="scroll-down">
+    <a href="#aboutMe">
+      <span className="arrow"></span>
+    </a>
+  </div>
+</section>
+
 
                 <section className='aboutMe' id="aboutMe">
                     <p className='head'><span className='headSpan'>About Me</span></p>
@@ -239,8 +249,8 @@ function Home() {
                             <h3><a href='mailto:arunkumarselvaraj.m@gmail.com'>arunkumarselvaraj.m@gmail.com</a></h3>
                         </div>
                         <div>
-                            <p>Name</p>
-                            <h3>Arunkumar Selvaraj</h3>
+                            <p>GitHub</p>
+                            <h3><a href='https://github.com/ArunkumarSelvaraj-M'>ArunkumarSelvaraj-M</a></h3>
                         </div>
                         <div>
                             <p>From</p>
@@ -355,21 +365,22 @@ function Home() {
                     </section>
                 </section>
 
-                <footer>
-                    <section>
-                        <article>
-                            <h3>Contact Information</h3>
-                            <p><span>Email: </span><a href='mailto:arunkumarsrlvaraj.m@gmail.com'>arunkumarsrlvaraj.m@gmail.com</a></p>
-                            <p><span>Location: </span>Thedavur, Gangavalli, Salem</p>
-                        </article>
-                        <article>
-                            <h3>Social Media</h3>
-                            <p><span>LinkedIn: </span><a href='mailto:arunkumarsrlvaraj.m@gmail.com'>arunkumarsrlvaraj.m@gmail.com</a></p>
-                            <p><span>GitHub: </span><a href='https://github.com/ArunkumarSelvaraj-M'>ArunkumarSelvaraj-M</a></p>
-                        </article>
-                    </section>
-                    <p className='copyrigthts'>© 2025 Arunkumar Selvaraj. All Rights Reserved.</p>
-                </footer>
+                <footer id='contactMe'>
+  <section>
+    <article>
+      <h3>Contact Information</h3>
+      <p><span>Email: </span><a href="mailto:arunkumarsrlvaraj.m@gmail.com">arunkumarsrlvaraj.m@gmail.com</a></p>
+      <p><span>Location: </span>Thedavur, Gangavalli, Salem</p>
+    </article>
+    <article>
+      <h3>Social Media</h3>
+      <p><span>LinkedIn: </span><a href="https://www.linkedin.com/in/arunkumar-selvaraj" target="_blank" rel="noopener noreferrer">Arunkumar Selvaraj</a></p>
+      <p><span>GitHub: </span><a href="https://github.com/ArunkumarSelvaraj-M" target="_blank" rel="noopener noreferrer">ArunkumarSelvaraj-M</a></p>
+    </article>
+  </section>
+  <p className="copyrights">© 2025 Arunkumar Selvaraj. All Rights Reserved.</p>
+</footer>
+
             </main>
         </>
     )

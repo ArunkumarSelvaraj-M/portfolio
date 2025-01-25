@@ -3,6 +3,7 @@ import "./Nav.css";
 
 const Nav = () => {
   const [activeSection, setActiveSection] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -10,6 +11,7 @@ const Nav = () => {
       let currentSection = "";
 
       sections.forEach((section) => {
+        if (!section.id) return; // Avoid sections without an id
         const sectionTop = section.offsetTop - 150; // Adjust for navbar height
         if (window.scrollY >= sectionTop) {
           currentSection = section.getAttribute("id");
@@ -26,7 +28,10 @@ const Nav = () => {
   return (
     <header>
       <nav>
-        <ul>
+        <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+          ☰
+        </div>
+        <ul className={menuOpen ? "nav-links open" : "nav-links"}>
           <li><a href="#home" className={activeSection === "home" ? "active" : ""}>Home</a></li>
           <li><a href="#aboutMe" className={activeSection === "aboutMe" ? "active" : ""}>About Me</a></li>
           <li><a href="#whatIDo" className={activeSection === "whatIDo" ? "active" : ""}>What I Do</a></li>

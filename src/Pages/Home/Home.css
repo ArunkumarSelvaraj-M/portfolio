@@ -2,7 +2,7 @@
 
 /* GLOBAL CSS */
 
-p,h1,h2,h3{
+p,h1,h2,h3,a{
     font-family: "Poppins", serif;
     font-weight: 400;
     font-style: normal;
@@ -19,81 +19,187 @@ p,h1,h2,h3{
     background-color: #f5df4e;
 }
 
+/* HOME SECTION */
 
-/* HOME */
-
-
-.home{
+.home {
     background-color: #f5df4e;
     margin: 0;
     padding: 0;
-    width: 100vw;
-    height: 100vh;
-}
-.home{
+    /* width: 100vw; */
+    height: 94vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
-    width: 100%;
-    /* height: 100vh; */
+    position: relative;
 }
-
-.home h2{
-  font-weight: 300;
-  font-size: 60px;
-  text-transform: uppercase;
-  margin: 0px;
-}
-
-.home .text{
-    height: 80px;
-}
-
-.home p{
-  font-weight: 400;
-  font-size: 21px;
-}
-
-.home .anhor{
-    padding-top: 40px;
-}
-
-.home a{
-  font-weight: 500;
-  font-size: 20px;
-    text-decoration: none;
-    background-color: black;
-    color: white;
-    padding: 20px 50px;
-    cursor: pointer;
-    transition: all .5s ease;
-}
-
-.home a:hover{
-    background-color: #6c757d;
-}
-
-.home h1{
-  font-weight: 600;
+/* Typography */
+.home h2 {
+    font-weight: 300;
     font-size: 60px;
     text-transform: uppercase;
     margin: 0px;
+    text-align: center;
 }
 
-.circular--portrait {
+.home .text {
+    height: 80px;
+}
+
+.home p {
+    font-weight: 400;
+    font-size: 21px;
+}
+
+.home .anchor {
+    padding-top: 40px;
+    
+}
+
+.home .anchor a {
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.home .anchor a:hover {
+    background-color: #6c757d;
+}
+
+/* Header Text */
+.home h1 {
+    font-weight: 600;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin: 0px;
+   
+}
+
+/* Circular Profile Image */
+.circular-portrait {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     overflow: hidden;
     border-radius: 50%;
-    border: 20px solid white;
+    border: 10px solid white;
+    display: flex;
+    justify-content: center;
 }
 
-.circular--portrait img {
+.circular-portrait img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Down Arrow Animation */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.scroll-down .arrow {
+    margin-bottom: 120%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    transform: rotate(45deg);
+    animation: bounce 1.5s infinite;
+}
+
+/* Keyframes for bounce animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) rotate(45deg);
+    }
+    50% {
+        transform: translateY(10px) rotate(45deg);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .home {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .home h2 {
+        font-size: 45px;
+    }
+
+    .home h1 {
+        font-size: 50px;
+    }
+
+    .home p {
+        font-size: 18px;
+    }
+
+    .home a {
+        font-size: 18px;
+        padding: 12px 30px;
+    }
+
+    .circular-portrait {
+        width: 300px;
+        height: 300px;
+    }
+
+    .scroll-down .arrow {
+        width: 25px;
+        height: 25px;
+        border-right: 3px solid black;
+        border-bottom: 3px solid black;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home h2 {
+        font-size: 38px;
+    }
+
+    .home h1 {
+        font-size: 42px;
+    }
+
+    .home p {
+        font-size: 16px;
+    }
+
+    .circular-portrait {
+        width: 250px;
+        height: 250px;
+    }
+
+    .home a {
+        font-size: 16px;
+        padding: 10px 25px;
+    }
+
+    .scroll-down .arrow {
+        width: 20px;
+        height: 20px;
+        border-right: 3px solid black;
+        border-bottom: 3px solid black;
+    }
 }
 
 /* ABOUT ME */
@@ -113,6 +219,7 @@ p,h1,h2,h3{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 200px;
 }
 
@@ -342,32 +449,66 @@ p,h1,h2,h3{
     justify-content: space-evenly;    
 }
 
-footer{
-    padding-top: 20px;
-    background-color: rgba(0, 0, 0, 0.691);
+/* FOOTER */
+
+/* FOOTER */
+footer {
+    padding: 20px 10px;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-footer section{
+/* Footer Content Layout */
+footer section {
     display: flex;
-    color: white;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: flex-start;
+    color: white;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-footer section article span{
+/* Footer Titles */
+footer section article h3 {
+    text-decoration: underline;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Footer Links */
+footer section article span {
     font-weight: bold;
 }
 
-footer section article h3{
+footer section article a {
+    color: #f5df4e;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+footer section article a:hover {
+    color: #ffcc00;
     text-decoration: underline;
 }
 
-footer section article a{
-    color: #f5df4e;
-}
-
-footer .copyrigthts{
+/* Copyright Section */
+footer .copyrights {
     color: #f5df4e;
     background-color: black;
     text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    footer section {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    footer section article {
+        margin-bottom: 15px;
+    }
 }

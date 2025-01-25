@@ -7,44 +7,90 @@ header {
     top: 0;
     left: 0;
     padding: 10px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
-    z-index: 1000; /* Ensures it stays above other content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
+/* Navbar */
 nav {
-    width: 40%;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-nav ul {
+/* Hamburger Menu (Hidden on Larger Screens) */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Navbar Links */
+.nav-links {
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     margin: 0;
-    padding: 10px 0;  /* Adjusted padding for better spacing */
+    padding: 10px 0;
 }
 
-nav a {
+.nav-links li {
+    padding: 10px;
+}
+
+.nav-links a {
     text-decoration: none;
     color: black;
-    transition: border-bottom 0.3s ease-in-out; /* Smooth hover effect */
+    transition: border-bottom 0.3s ease-in-out;
     padding-bottom: 5px;
+    font-size: 18px;
 }
 
-nav a:hover {
-    border-bottom: 2px solid black; /* More visible hover effect */
-}
-
-/* Highlight the active link */
-nav a.active {
+/* Hover & Active States */
+.nav-links a:hover,
+.nav-links a.active {
     border-bottom: 2px solid black;
-    color: #000;
     font-weight: bold;
 }
 
-/* Smooth scrolling effect */
+/* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show menu icon on small screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide menu initially */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #f5df4e;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.open {
+        display: flex; /* Show menu when open */
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 20px;
+    }
 }
