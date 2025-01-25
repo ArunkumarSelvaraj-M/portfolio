@@ -2,18 +2,22 @@
 
 /* GLOBAL CSS */
 
-p,h1,h2,h3,a{
+p,
+h1,
+h2,
+h3,
+a {
     font-family: "Poppins", serif;
     font-weight: 400;
     font-style: normal;
 }
 
-.head{
+.head {
     text-align: center;
     font-size: 16px;
 }
 
-.headSpan{
+.headSpan {
     text-align: center;
     padding: 4px;
     background-color: #f5df4e;
@@ -34,6 +38,7 @@ p,h1,h2,h3,a{
     align-items: center;
     position: relative;
 }
+
 /* Typography */
 .home h2 {
     font-weight: 300;
@@ -54,7 +59,7 @@ p,h1,h2,h3,a{
 
 .home .anchor {
     padding-top: 40px;
-    
+
 }
 
 .home .anchor a {
@@ -79,7 +84,7 @@ p,h1,h2,h3,a{
     font-size: 60px;
     text-transform: uppercase;
     margin: 0px;
-   
+
 }
 
 /* Circular Profile Image */
@@ -123,9 +128,12 @@ p,h1,h2,h3,a{
 
 /* Keyframes for bounce animation */
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0) rotate(45deg);
     }
+
     50% {
         transform: translateY(10px) rotate(45deg);
     }
@@ -203,11 +211,11 @@ p,h1,h2,h3,a{
 }
 
 /* ABOUT ME */
-.aboutMe{
+.aboutMe {
     padding: 1% 0;
 }
 
-.aboutMe .header{
+.aboutMe .header {
     text-align: center;
     font-size: 40px;
     font-weight: 600;
@@ -215,7 +223,7 @@ p,h1,h2,h3,a{
 
 /* ABOUT ME SUMMAR CONTENT */
 
-.aboutMe .summary{
+.aboutMe .summary {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -223,7 +231,7 @@ p,h1,h2,h3,a{
     /* gap: 200px; */
 }
 
-.aboutMe .summary .cont{
+.aboutMe .summary .cont {
     width: 50%;
     color: #212529;
     font-family: "Poppins", serif;
@@ -238,28 +246,28 @@ p,h1,h2,h3,a{
     .aboutMe .summary .cont {
         width: 90%;
     }
-  }
+}
 
-.aboutMe .summary .cont p{
+.aboutMe .summary .cont p {
     font-size: 32px;
 }
 
-.aboutMe .summary .cont p span{
+.aboutMe .summary .cont p span {
     font-weight: 700;
     text-decoration: underline;
-    text-underline-offset: 10px; 
+    text-underline-offset: 10px;
     text-decoration-thickness: 3.1px;
     text-decoration-color: #f5df4e;
 }
 
 /* ABOUT ME YEAR OF EXPERIENCE NUMBER */
 
-.summary .year{
+.summary .year {
     position: relative;
     left: 30%;
 }
 
-.summary .year .circule{
+.summary .year .circule {
     position: absolute;
     z-index: -1;
     top: 27px;
@@ -268,24 +276,9 @@ p,h1,h2,h3,a{
     width: 80px;
     background-color: #f5df4e;
     border-radius: 200px;
-    animation: pullAnim 2s ease 0s 1 normal forwards;
 }
 
-@keyframes pullAnim {
-	0% {
-		transform: scale(1);
-	}
-
-	50% {
-		transform: scale(2.1);
-	}
-
-	100% {
-		transform: scale(1);
-	}
-}
-
-.summary .year p{
+.summary .year p {
     font-family: "Poppins", serif;
     font-weight: 400;
     font-style: normal;
@@ -296,7 +289,7 @@ p,h1,h2,h3,a{
 
 /* ABOUT ME YEAR OF EXPERIENCE */
 
-.summary .exp p{
+.summary .exp p {
     font-family: "Poppins", serif;
     font-weight: 400;
     font-style: normal;
@@ -305,13 +298,13 @@ p,h1,h2,h3,a{
     text-align: justify;
 }
 
-.summary .exp p span{
+.summary .exp p span {
     font-weight: 600;
 }
 
 /* ABOUT MY INFORMATION */
 
-.info{
+.info {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -322,23 +315,24 @@ p,h1,h2,h3,a{
     padding: 10px;
 }
 
-.info p,h3{
+.info p,
+h3 {
     margin: 0px;
 }
 
-.info p{
+.info p {
     color: #6c757d;
     font-size: 16px;
     font-weight: 500;
 }
 
-.info h3{
+.info h3 {
     color: #212529;
     font-weight: 600;
     font-size: 18px;
 }
 
-.info h3 a{
+.info h3 a {
     color: #212529;
     font-weight: 600;
     font-size: 18px;
@@ -349,41 +343,41 @@ p,h1,h2,h3,a{
     .info {
         justify-content: normal;
     }
-  }
+}
 
 /* WHAT I DO */
 
-.whatIDo{
+.whatIDo {
     padding: 1% 10%;
     background-color: #f8f9fa;
 }
 
-.whatIDo .header{
+.whatIDo .header {
     text-align: center;
     font-size: 40px;
     font-weight: 600;
 }
 
-.whatIDo .whatIDoCards{
+.whatIDo .whatIDoCards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;    
+    justify-content: space-evenly;
 }
 
 /* RESUME */
 
-.resume{
+.resume {
     padding: 1% 10%;
 }
 
-.resume .header{
+.resume .header {
     text-align: center;
     font-size: 40px;
     font-weight: 600;
 }
 
-.resume .resumeCon{
+.resume .resumeCon {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -393,38 +387,38 @@ p,h1,h2,h3,a{
     padding: 10px;
 }
 
-.resume .resumeCon h2{
+.resume .resumeCon h2 {
     font-size: 28px;
 }
 
-.resume .resumeCon h3{
+.resume .resumeCon h3 {
     font-size: 21px;
     font-weight: 500;
 }
 
-.resume .resumeCon article h2{
+.resume .resumeCon article h2 {
     font-weight: 600;
 }
 
-.resume .resumeCon article .education{
+.resume .resumeCon article .education {
     border-left: 2px solid #f5df4e;
     padding-left: 10px;
 }
 
-.resume .resumeCon article .education p{
+.resume .resumeCon article .education p {
     color: #6c757d;
 }
 
-.resume .resumeCon article .education div hr{
+.resume .resumeCon article .education div hr {
     opacity: .5;
 }
 
-.resume .skills .cvbtn{
+.resume .skills .cvbtn {
     display: flex;
     justify-content: center;
 }
 
-.resume .skills .cvbtn button{
+.resume .skills .cvbtn button {
     padding: .8rem 2.6rem;
     background: none;
     color: black;
@@ -432,7 +426,7 @@ p,h1,h2,h3,a{
     transition: all .5s ease;
 }
 
-.resume .skills .cvbtn button:hover{
+.resume .skills .cvbtn button:hover {
     background-color: black;
     color: white;
 }
@@ -442,44 +436,44 @@ p,h1,h2,h3,a{
     .resume {
         width: 90%;
     }
-  }
+}
 
 /* WORK */
 
-.work{
+.work {
     padding: 1% 10%;
     background-color: #f8f9fa;
 }
 
-.work .header{
+.work .header {
     text-align: center;
     font-size: 40px;
     font-weight: 600;
 }
 
-.work .workCards{
+.work .workCards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;    
+    justify-content: space-evenly;
 }
 
 /* BLOGS */
-.blogs{
+.blogs {
     padding: 1% 10%;
 }
 
-.blogs .header{
+.blogs .header {
     text-align: center;
     font-size: 40px;
     font-weight: 600;
 }
 
-.blogs .blogsCards{
+.blogs .blogsCards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;    
+    justify-content: space-evenly;
 }
 
 /* FOOTER */

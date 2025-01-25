@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
+// import Snowfall from "../../Components/YellowSnowfall/Snowfall";
 import Nav from "../../Components/Nav/Nav";
 import WhatCard from "../../Components/Card/whatidoCard";
 import Card from "../../Components/Card/Card";
@@ -24,7 +25,6 @@ import Network from "../../Assets/Images/network.png";
 import "./Home.css"
 
 function Home() {
-
     /* HOME */
 
     const words = ['CI/CD Automation', 'Cloud Infrastructure', 'AWS & GCP Expertise'];
@@ -123,7 +123,7 @@ function Home() {
             image: Tiktik,
             heading: "Tik Tik",
             paragraph: "This is a sample description for Card 3.",
-            description: ["JIRA","GitHub Action", "Docker", "Terraform", "GCR", "Cloud Run"]
+            description: ["JIRA", "GitHub Action", "Docker", "Terraform", "GCR", "Cloud Run"]
         },
         {
             image: Airbuzz,
@@ -230,6 +230,8 @@ function Home() {
 
 
                 <section className='aboutMe' id="aboutMe">
+                 {/* Add the Snowfall component here */}
+                 {/* <Snowfall /> */}
                     <p className='head'><span className='headSpan'>About Me</span></p>
                     <h2 className='header'>Know Me More</h2>
                     <article className='summary'>
@@ -237,7 +239,14 @@ function Home() {
                         <p className='cont'><p>Hi, I'M <span>Arunkumar Selvaraj</span></p>I am a DevOps Engineer with 3+ years of experience in automating, optimizing, and securing cloud-based infrastructure. My expertise lies in CI/CD pipelines, containerization, orchestration, infrastructure as code (IaC), and cloud platforms like AWS and GCP. I have a strong background in implementing scalable and resilient architectures, ensuring high availability, and improving system reliability. Passionate about streamlining development workflows, I thrive on bridging the gap between development and operations to drive efficiency and innovation.</p>
                         <article>
                             <div className='year'>
-                                <span className='circule'></span>
+                            <motion.span
+                                className='circule'
+                                initial={{ scale: 1 }} // Normal size at start
+                                animate={{ scale: [1, 2.1, 1] }} // Scale up, then down
+                                transition={{ duration: 1.5, ease: "easeInOut", repeat: Infinity }} // Smooth loop
+                                >
+
+                            </ motion.span>
                                 <p>3+</p>
                             </div>
                             <div className='exp'>
