@@ -61,20 +61,13 @@ const Skills = () => {
             <div className="skills-grid">
               {skillsData[category].map((skill, i) => (
                 <div key={i} className="skill">
-                  <div className="percentage">
+                  
                     <ul>
-                      <li><p>{skill.name}</p></li>
+                      <li>{skill.name}</li>
                     </ul>
 
-                    {/* <p>{skill.percentage}%</p> */}
-                  </div>
-
-                  {/* <div className="progress-bar">
-                  <div
-                    className="progress"
-                    style={{ width: `${skill.percentage}%` }}
-                  ></div>
-                </div> */}
+                 
+                 
                 </div>
               ))}
             </div>

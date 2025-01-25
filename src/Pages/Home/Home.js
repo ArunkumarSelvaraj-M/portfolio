@@ -110,37 +110,44 @@ function Home() {
         {
             image: Autocloud,
             heading: "AutoCloud",
-            paragraph: "This is a sample description for Card 1."
+            paragraph: "This is a sample description for Card 1.",
+            description: ["JIRA", "Git", "GitHub", "GitHub Action", "Checkov", "Packer", "Terraform"]
         },
         {
             image: Nalanbatters,
             heading: "Nalan Batters",
-            paragraph: "This is a sample description for Card 2."
+            paragraph: "This is a sample description for Card 2.",
+            description: ["GitHub Action", "Docker", "Terraform", "GCR", "Cloud Run"]
         },
         {
             image: Tiktik,
             heading: "Tik Tik",
-            paragraph: "This is a sample description for Card 3."
+            paragraph: "This is a sample description for Card 3.",
+            description: ["JIRA","GitHub Action", "Docker", "Terraform", "GCR", "Cloud Run"]
         },
         {
             image: Airbuzz,
             heading: "Airbuzz",
-            paragraph: "This is a sample description for Card 4."
+            paragraph: "This is a sample description for Card 4.",
+            description: ["Vnet", "VM"]
         },
         {
             image: Tekfilo,
             heading: "Tekfilo",
-            paragraph: "This is a sample description for Card 5."
+            paragraph: "This is a sample description for Card 5.",
+            description: ["GitHub", "Docker", "Jenkins", "VPC", "ECR", "EKS", "RDS", "S3", "CloudWatch", "Nginx"]
         },
         {
             image: "https://via.placeholder.com/250x150",
             heading: "Labely",
-            paragraph: "This is a sample description for Card 5."
+            paragraph: "This is a sample description for Card 5.",
+            description: ["GitHub", "Terraform", "Docker", "GCR", "Cloud Run", "Cloud SQL"]
         },
         {
             image: "https://via.placeholder.com/250x150",
             heading: "Jenkins (SAAS)",
-            paragraph: "This is a sample description for Card 5."
+            paragraph: "This is a sample description for Card 5.",
+            description: ["Docker", "Jenkins", "Terraform", "GCR", "VPC", "Compute Engine"]
         },
     ];
 
@@ -196,30 +203,30 @@ function Home() {
             <main>
                 <Nav />
                 <section className="home" id="home">
-  <article>
-    <h2>Hi, I'M A DevOps Engineer</h2>
+                    <article>
+                        <h2>Hi, I'M A DevOps Engineer</h2>
 
-    <div className="text">
-      <h1>{text}</h1>
-    </div>
+                        <div className="text">
+                            <h1>{text}</h1>
+                        </div>
 
-    <p>Based in Tamil Nadu, India.</p>
-    <div className="anchor">
-      <a href="#work">View My Work</a>
-    </div>
-  </article>
+                        <p>Based in Tamil Nadu, India.</p>
+                        <div className="anchor">
+                            <a href="#work">View My Work</a>
+                        </div>
+                    </article>
 
-  <article className="circular-portrait">
-    <img src={Arun} alt="Arunkumar" />
-  </article>
+                    <article className="circular-portrait">
+                        <img src={Arun} alt="Arunkumar" />
+                    </article>
 
-  {/* Scroll Down Arrow */}
-  <div className="scroll-down">
-    <a href="#aboutMe">
-      <span className="arrow"></span>
-    </a>
-  </div>
-</section>
+                    {/* Scroll Down Arrow */}
+                    <div className="scroll-down">
+                        <a href="#aboutMe">
+                            <span className="arrow"></span>
+                        </a>
+                    </div>
+                </section>
 
 
                 <section className='aboutMe' id="aboutMe">
@@ -265,13 +272,13 @@ function Home() {
                     <p className='head'><span className='headSpan'>What I Do?</span></p>
                     <h2 className='header'>How I can help your next project</h2>
                     <section className='whatIDoCards'>
-                    {whatIDoCard.map((whatIDoCard, index) => (
+                        {whatIDoCard.map((whatIDoCard, index) => (
                             <WhatCard
                                 key={index}
                                 image={whatIDoCard.image}
                                 heading={whatIDoCard.heading}
                                 paragraph={whatIDoCard.paragraph}
-                                
+
                             />
                         ))}
                     </section>
@@ -344,6 +351,7 @@ function Home() {
                         image={selectedCard?.image}
                         heading={selectedCard?.heading}
                         paragraph={selectedCard?.paragraph}
+                        description={selectedCard?.description}
                     />
                 </section>
 
@@ -366,20 +374,20 @@ function Home() {
                 </section>
 
                 <footer id='contactMe'>
-  <section>
-    <article>
-      <h3>Contact Information</h3>
-      <p><span>Email: </span><a href="mailto:arunkumarsrlvaraj.m@gmail.com">arunkumarsrlvaraj.m@gmail.com</a></p>
-      <p><span>Location: </span>Thedavur, Gangavalli, Salem</p>
-    </article>
-    <article>
-      <h3>Social Media</h3>
-      <p><span>LinkedIn: </span><a href="https://www.linkedin.com/in/arunkumar-selvaraj" target="_blank" rel="noopener noreferrer">Arunkumar Selvaraj</a></p>
-      <p><span>GitHub: </span><a href="https://github.com/ArunkumarSelvaraj-M" target="_blank" rel="noopener noreferrer">ArunkumarSelvaraj-M</a></p>
-    </article>
-  </section>
-  <p className="copyrights">© 2025 Arunkumar Selvaraj. All Rights Reserved.</p>
-</footer>
+                    <section>
+                        <article>
+                            <h3>Contact Information</h3>
+                            <p><span>Email: </span><a href="mailto:arunkumarsrlvaraj.m@gmail.com">arunkumarsrlvaraj.m@gmail.com</a></p>
+                            <p><span>Location: </span>Thedavur, Gangavalli, Salem</p>
+                        </article>
+                        <article>
+                            <h3>Social Media</h3>
+                            <p><span>LinkedIn: </span><a href="https://www.linkedin.com/in/arunkumar-selvaraj" target="_blank" rel="noopener noreferrer">Arunkumar Selvaraj</a></p>
+                            <p><span>GitHub: </span><a href="https://github.com/ArunkumarSelvaraj-M" target="_blank" rel="noopener noreferrer">ArunkumarSelvaraj-M</a></p>
+                        </article>
+                    </section>
+                    <p className="copyrights">© 2025 Arunkumar Selvaraj. All Rights Reserved.</p>
+                </footer>
 
             </main>
         </>
