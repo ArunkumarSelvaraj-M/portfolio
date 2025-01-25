@@ -1,0 +1,32 @@
+.whatidoCard {
+    width: 350px;
+    padding: 15px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* Card Image */
+.whatidoCard-image {
+    width: 80%;
+    max-height: 100px;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+  
+  /* Card Heading */
+  .whatidoCard h3 {
+    font-size: 22px;
+    margin: 10px 0;
+    color: #444;
+  }
+  
+  /* Card Paragraph */
+  .whatidoCard p {
+    font-size: 16px;
+    color: #666;
+    padding: 0 10px;
+  }

@@ -28,19 +28,37 @@
     text-decoration: underline;
     text-underline-offset: 10px; 
     text-decoration-thickness: 2.5px;
-    text-decoration-color: #212529;
+    text-decoration-color: #fdd835;
   }
 
   .skills-container .category hr {
     width: 35%;
     margin-left: 0px;
   }
-  
-  .skills-grid {
+
+  .category-skill{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
+  .skill-grid ul li{
+    display: flex;
+  }
+
+  .category-skill ul{
+    width: 150px;
+  }
+
+  .category-skill ul li::marker{
+    color: #fdd835;
+  }
+
+  /* Responsive Design */
+@media (max-width: 768px) {
+  .category-skill ul {
+      width: 90%;
+  }
+}
   
   .skill {
     width: 48%; /* Two columns */
@@ -52,17 +70,11 @@
     line-height: 1.3;
   }
   
-  /* .skill span {
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bold;
-  } */
-  
-  .percentage {
+  /* .percentage {
     display: flex;
     justify-content: space-between;
     font-weight: 500;
-  }
+  } */
   
   .progress-bar {
     width: 100%;

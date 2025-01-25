@@ -224,37 +224,11 @@ p,h1,h2,h3{
     font-weight: 600;
 }
 
-.whatIDo section{
+.whatIDo .whatIDoCards{
     display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.whatIDo article img{
-    height: 100px;
-    width: 100px;
-}
-
-.whatIDo section article{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-evenly;
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-style: normal;
-    padding: 10px;
-}
-.whatIDo section article h3{
-    font-weight: 600;
-    font-size: 24px;
-}
-
-.whatIDo section article p{
-    text-align: center;
-    color: #6c757d;
-    line-height: 1.5;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;    
 }
 
 /* RESUME */
@@ -271,10 +245,8 @@ p,h1,h2,h3{
 
 .resume .resumeCon{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px;
-    justify-content: space-evenly;
     font-family: "Poppins", serif;
     font-weight: 400;
     font-style: normal;
@@ -288,37 +260,6 @@ p,h1,h2,h3{
 .resume .resumeCon h3{
     font-size: 21px;
     font-weight: 500;
-}
-
-.resume .resumeCon .animationLeft{
-    animation: leftAnim 2s ease 0s 1 alternate both;
-}
-
-@keyframes leftAnim {
-	0% {
-		opacity: 0;
-		transform: translateX(-250px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-.resume .resumeCon .animationRight{
-    animation: rightAnim 2s ease 0s 1 alternate both;
-}
-@keyframes rightAnim {
-	0% {
-		opacity: 0;
-		transform: translateX(250px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
 }
 
 .resume .resumeCon article h2{
@@ -355,6 +296,13 @@ p,h1,h2,h3{
     background-color: black;
     color: white;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resume {
+        width: 90%;
+    }
+  }
 
 /* WORK */
 

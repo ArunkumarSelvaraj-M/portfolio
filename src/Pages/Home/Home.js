@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import Nav from "../../Components/Nav/Nav";
+import WhatCard from "../../Components/Card/whatidoCard";
 import Card from "../../Components/Card/Card";
 import Modal from "../../Components/Modal/Modal";
 import Skills from "../../Components/Skills/Skills";
@@ -70,6 +71,40 @@ function Home() {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedCard, setSelectedCard] = useState(null);
+
+    const whatIDoCard = [
+        {
+            image: Cicd,
+            heading: "CI/CD Automation",
+            paragraph: "I design and implement continuous integration and continuous delivery pipelines to automate software delivery, ensuring faster and more reliable releases."
+        },
+        {
+            image: CI,
+            heading: "Infrastructure as Code (IaC)",
+            paragraph: "Using tools like Terraform, CloudFormation, and Ansible, I automate infrastructure provisioning, management, and scaling, ensuring consistency across environments."
+        },
+        {
+            image: Cloud,
+            heading: "Cloud Infrastructure Management",
+            paragraph: "I leverage cloud platforms such as AWS and GCP to architect and manage cloud infrastructure, optimizing for cost, performance, and security."
+        },
+        {
+            image: K8s,
+            heading: "Containerization & Orchestration",
+            paragraph: "I design and deploy containerized applications using Docker and Kubernetes, enabling seamless scaling and orchestration across environments."
+        },
+        {
+            image: Monitoring,
+            heading: "Monitoring & Incident Response",
+            paragraph: "I set up monitoring and logging solutions to ensure high system availability, identify issues proactively, and streamline troubleshooting and incident response."
+        },
+        {
+            image: Automation,
+            heading: "Automation & Scripting",
+            paragraph: "I write custom automation scripts to reduce manual work and optimize operational tasks, using languages like Python, Shell, and Bash."
+        },
+
+    ]
 
     const workData = [
         {
@@ -219,39 +254,16 @@ function Home() {
                 <section className='whatIDo' id='whatIDo'>
                     <p className='head'><span className='headSpan'>What I Do?</span></p>
                     <h2 className='header'>How I can help your next project</h2>
-                    <section>
-                        <article>
-                            <img src={Cicd} alt='Network' />
-                            <h3>CI/CD Automation</h3>
-                            <p>I design and implement continuous integration and continuous delivery pipelines to automate software delivery, ensuring faster and more reliable releases.</p>
-                        </article>
-                        <article>
-                            <img src={CI} alt='cloud infrastructure' />
-                            <h3>Infrastructure as Code (IaC)</h3>
-                            <p>Using tools like Terraform, CloudFormation, and Ansible, I automate infrastructure provisioning, management, and scaling, ensuring consistency across environments.</p>
-                        </article>
-                        <article>
-                            <img src={Cloud} alt='cloud computing' />
-                            <h3>Cloud Infrastructure Management</h3>
-                            <p>I leverage cloud platforms such as AWS and GCP to architect and manage cloud infrastructure, optimizing for cost, performance, and security.</p>
-                        </article>
-                    </section>
-                    <section>
-                        <article>
-                            <img src={K8s} alt='kubernetes' />
-                            <h3>Containerization & Orchestration</h3>
-                            <p>I design and deploy containerized applications using Docker and Kubernetes, enabling seamless scaling and orchestration across environments.</p>
-                        </article>
-                        <article>
-                            <img src={Monitoring} alt='monitoring' />
-                            <h3>Monitoring & Incident Response</h3>
-                            <p>I set up monitoring and logging solutions to ensure high system availability, identify issues proactively, and streamline troubleshooting and incident response.</p>
-                        </article>
-                        <article>
-                            <img src={Automation} alt='automation' />
-                            <h3>Automation & Scripting</h3>
-                            <p>I write custom automation scripts to reduce manual work and optimize operational tasks, using languages like Python, Shell, and Bash.</p>
-                        </article>
+                    <section className='whatIDoCards'>
+                    {whatIDoCard.map((whatIDoCard, index) => (
+                            <WhatCard
+                                key={index}
+                                image={whatIDoCard.image}
+                                heading={whatIDoCard.heading}
+                                paragraph={whatIDoCard.paragraph}
+                                
+                            />
+                        ))}
                     </section>
                 </section>
 
@@ -260,10 +272,10 @@ function Home() {
                     <h2 className='header'>A summary of My Resume</h2>
                     <section className='resumeCon'>
                         <motion.article
-                            initial={{ opacity: 0, x: -250 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 1, ease: "easeInOut" }}
-                            viewport={{ once: false, amount: 0.2 }} // Repeats animation on scroll
+                            initial={{ y: 50, opacity: 0 }} // Start below and hidden
+                            whileInView={{ y: 0, opacity: 1 }} // Animate when in viewport
+                            viewport={{ once: false, amount: 0.2 }} // Triggers when 20% visible
+                            transition={{ duration: 0.8, ease: "easeOut" }}
                         >
                             <h2>My Education</h2>
                             <div className="education">
@@ -276,10 +288,10 @@ function Home() {
                             </div>
                         </motion.article>
                         <motion.article
-                            initial={{ opacity: 0, x: 250 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 1, ease: "easeInOut" }}
-                            viewport={{ once: false, amount: 0.2 }} // Repeats animation on scroll
+                            initial={{ y: 50, opacity: 0 }} // Start below and hidden
+                            whileInView={{ y: 0, opacity: 1 }} // Animate when in viewport
+                            viewport={{ once: false, amount: 0.2 }} // Triggers when 20% visible
+                            transition={{ duration: 0.8, ease: "easeOut" }}
                         >
                             <h2>My Experience</h2>
                             <div className='education'>
@@ -342,6 +354,7 @@ function Home() {
                         ))}
                     </section>
                 </section>
+
                 <footer>
                     <section>
                         <article>

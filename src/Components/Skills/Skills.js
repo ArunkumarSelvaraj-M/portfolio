@@ -54,28 +54,34 @@ const Skills = () => {
   return (
     <div className="skills-container">
       <h2>My Skills</h2>
-      {Object.keys(skillsData).map((category, index) => (
-        <div key={index} className="category">
+      <div className="category-skill">
+        {Object.keys(skillsData).map((category, index) => (
+          <div key={index} className="category">
             <h3>{category}</h3>
-          <div className="skills-grid">
-            {skillsData[category].map((skill, i) => (
-              <div key={i} className="skill">
-                <div className="percentage">
-                    <p>{skill.name}</p>
-                    <p>{skill.percentage}%</p>
-                </div>
-                
-                <div className="progress-bar">
+            <div className="skills-grid">
+              {skillsData[category].map((skill, i) => (
+                <div key={i} className="skill">
+                  <div className="percentage">
+                    <ul>
+                      <li><p>{skill.name}</p></li>
+                    </ul>
+
+                    {/* <p>{skill.percentage}%</p> */}
+                  </div>
+
+                  {/* <div className="progress-bar">
                   <div
                     className="progress"
                     style={{ width: `${skill.percentage}%` }}
                   ></div>
+                </div> */}
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+
     </div>
   );
 };
