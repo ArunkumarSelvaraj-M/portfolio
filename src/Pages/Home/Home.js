@@ -6,6 +6,7 @@ import WhatCard from "../../Components/Card/whatidoCard";
 import Card from "../../Components/Card/Card";
 import Modal from "../../Components/Modal/Modal";
 import Skills from "../../Components/Skills/Skills";
+import ContactForm from "../../Components/ContactForm/ContactForm";
 // about me images
 import Arun from "../../Assets/Images/ArunkumarSelvaraj.jpg";
 import Cicd from "../../Assets/Images/cicd.png"
@@ -236,7 +237,7 @@ function Home() {
                     <h2 className='header'>Know Me More</h2>
                     <article className='summary'>
 
-                        <p className='cont'><p>Hi, I'M <span>Arunkumar Selvaraj</span></p>I am a DevOps Engineer with 3+ years of experience in automating, optimizing, and securing cloud-based infrastructure. My expertise lies in CI/CD pipelines, containerization, orchestration, infrastructure as code (IaC), and cloud platforms like AWS and GCP. I have a strong background in implementing scalable and resilient architectures, ensuring high availability, and improving system reliability. Passionate about streamlining development workflows, I thrive on bridging the gap between development and operations to drive efficiency and innovation.</p>
+                        <p className='cont'>Hi, I'M <span>Arunkumar Selvaraj</span></p><p>I am a DevOps Engineer with 3+ years of experience in automating, optimizing, and securing cloud-based infrastructure. My expertise lies in CI/CD pipelines, containerization, orchestration, infrastructure as code (IaC), and cloud platforms like AWS and GCP. I have a strong background in implementing scalable and resilient architectures, ensuring high availability, and improving system reliability. Passionate about streamlining development workflows, I thrive on bridging the gap between development and operations to drive efficiency and innovation.</p>
                         <article>
                             <div className='year'>
                             <motion.span
@@ -381,7 +382,7 @@ function Home() {
                         ))}
                     </section>
                 </section>
-
+                        <ContactForm />
                 <footer id='contactMe'>
                     <section>
                         <article>

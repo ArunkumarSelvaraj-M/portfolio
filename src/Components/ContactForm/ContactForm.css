@@ -1,0 +1,95 @@
+
+  
+  /* Main container */
+  .contactForm{
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0;
+    
+  }
+
+  .contactForm h1{
+    font-size: 40px;
+    font-weight: 600;
+  }
+  /* .contactForm {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    margin: 20px;
+  }
+   */
+  
+  /* Form Styles */
+  .contactForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Labels */
+  .contactForm form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+  
+  /* Inputs and Textareas */
+  .contactForm form input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333333;
+  }
+  
+  .contactForm form input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Button */
+  .contactForm form button {
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contactForm form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  /* @media (max-width: 480px) {
+    main {
+      padding: 15px;
+    }
+  
+    header h1 {
+      font-size: 20px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  } */
+  
