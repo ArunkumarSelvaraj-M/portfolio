@@ -22,7 +22,7 @@ const ContactForm = () => {
         try {
             console.log("form data : ", formData)
             const response = await axios.post("http://10.0.0.38:8080/api/mailSend", formData);
-            setResponseMessage(response.data.message || "Message sent successfully!");
+            setResponseMessage(response.data.status || "Message sent successfully!");
         } catch (error) {
             console.error("Error sending message:", error); // Log the error for debugging
             setResponseMessage(
