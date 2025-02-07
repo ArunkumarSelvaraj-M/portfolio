@@ -1,6 +1,6 @@
 /* KubernetesBlog.css */
-.blog-container {
-    max-width: 800px;
+/* .kube-container {
+    
     margin: 20px auto;
     padding: 20px;
     font-family: Arial, sans-serif;
@@ -10,7 +10,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  .blog-title {
+  .kube-title {
     text-align: center;
     color: #333;
   }
@@ -46,4 +46,16 @@
     text-align: center;
     font-weight: bold;
   }
-  
+   */
+
+   .architecture,.workerNode,.pod{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+   }
+
+   .architecture img{
+    height: 50%;
+    width: 50%;
+   }

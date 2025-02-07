@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import "./Nav.css";
 
 const Nav = () => {
@@ -11,7 +12,7 @@ const Nav = () => {
       let currentSection = "";
 
       sections.forEach((section) => {
-        if (!section.id) return; // Avoid sections without an id
+        if (!section.id) return;
         const sectionTop = section.offsetTop - 150; // Adjust for navbar height
         if (window.scrollY >= sectionTop) {
           currentSection = section.getAttribute("id");
@@ -26,19 +27,19 @@ const Nav = () => {
   }, []);
 
   return (
-    <header>
+    <header className="navheader">
       <nav>
         <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
           ☰
         </div>
         <ul className={menuOpen ? "nav-links open" : "nav-links"}>
-          <li><a href="#home" className={activeSection === "home" ? "active" : ""}>Home</a></li>
-          <li><a href="#aboutMe" className={activeSection === "aboutMe" ? "active" : ""}>About Me</a></li>
-          <li><a href="#whatIDo" className={activeSection === "whatIDo" ? "active" : ""}>What I Do</a></li>
-          <li><a href="#resume" className={activeSection === "resume" ? "active" : ""}>Resume</a></li>
-          <li><a href="#work" className={activeSection === "work" ? "active" : ""}>Work</a></li>
-          <li><a href="#blogs" className={activeSection === "blogs" ? "active" : ""}>Blogs</a></li>
-          <li><a href="#contactMe" className={activeSection === "contactMe" ? "active" : ""}>Contact Me</a></li>
+          <li><Link smooth to="/#home" className={activeSection === "home" ? "active" : ""} onClick={() => setMenuOpen(false)}>Home</Link></li>
+          <li><Link smooth to="/#aboutMe" className={activeSection === "aboutMe" ? "active" : ""} onClick={() => setMenuOpen(false)}>About Me</Link></li>
+          <li><Link smooth to="/#whatIDo" className={activeSection === "whatIDo" ? "active" : ""} onClick={() => setMenuOpen(false)}>What I Do</Link></li>
+          <li><Link smooth to="/#resume" className={activeSection === "resume" ? "active" : ""} onClick={() => setMenuOpen(false)}>Resume</Link></li>
+          <li><Link smooth to="/#work" className={activeSection === "work" ? "active" : ""} onClick={() => setMenuOpen(false)}>Work</Link></li>
+          <li><Link smooth to="/#blogs" className={activeSection === "blogs" ? "active" : ""} onClick={() => setMenuOpen(false)}>Blogs</Link></li>
+          <li><Link smooth to="/#contactMe" className={activeSection === "contactMe" ? "active" : ""} onClick={() => setMenuOpen(false)}>Contact Me</Link></li>
         </ul>
       </nav>
     </header>

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
+import { HashLink as Link } from "react-router-hash-link";
 // import Snowfall from "../../Components/YellowSnowfall/Snowfall";
 import Nav from "../../Components/Nav/Nav";
 import WhatCard from "../../Components/Card/whatidoCard";
 import Card from "../../Components/Card/Card";
 import Modal from "../../Components/Modal/Modal";
 import Skills from "../../Components/Skills/Skills";
-import ContactForm from "../../Components/ContactForm/ContactForm";
+// import ContactForm from "../../Components/ContactForm/ContactForm";
 // about me images
 import Arun from "../../Assets/Images/ArunkumarSelvaraj.jpg";
 import Cicd from "../../Assets/Images/cicd.png"
@@ -23,9 +24,12 @@ import Airbuzz from "../../Assets/Images/Airbuzz.png";
 import Tekfilo from "../../Assets/Images/tekfilo.png";
 // blog images
 import Network from "../../Assets/Images/network.png";
+import Kubernetes from "../../Assets/Images/blogs/k8s-logo.png";
 import "./Home.css"
 
 function Home() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     /* HOME */
 
     const words = ['CI/CD Automation', 'Cloud Infrastructure', 'AWS & GCP Expertise'];
@@ -172,10 +176,10 @@ function Home() {
             link: "/network"
         },
         {
-            image: Network,
-            heading: "Networking in DevOps",
-            paragraph: "Networking is essential in DevOps for enabling communication between applications, services, and infrastructure. A strong understanding of networking helps in deploying secure and high-performing applications.",
-            link: "/network"
+            image: Kubernetes,
+            heading: "Kubernetes",
+            paragraph: "Kubernetes, also known as K8s, is an open source system for automating deployment, scaling, and management of containerized applications.",
+            link: "/kubernetes"
         },
         {
             image: Network,
@@ -213,7 +217,8 @@ function Home() {
 
                         <p>Based in Tamil Nadu, India.</p>
                         <div className="anchor">
-                            <a href="#work">View My Work</a>
+                        <Link smooth to="/#work" onClick={() => setMenuOpen(false)}>View My Work</Link>
+                            {/* <a href="#work">View My Work</a> */}
                         </div>
                     </article>
 
@@ -237,7 +242,7 @@ function Home() {
                     <h2 className='header'>Know Me More</h2>
                     <article className='summary'>
 
-                        <p className='cont'>Hi, I'M <span>Arunkumar Selvaraj</span></p><p>I am a DevOps Engineer with 3+ years of experience in automating, optimizing, and securing cloud-based infrastructure. My expertise lies in CI/CD pipelines, containerization, orchestration, infrastructure as code (IaC), and cloud platforms like AWS and GCP. I have a strong background in implementing scalable and resilient architectures, ensuring high availability, and improving system reliability. Passionate about streamlining development workflows, I thrive on bridging the gap between development and operations to drive efficiency and innovation.</p>
+                        <p className='cont'><p>Hi, I'M <span>Arunkumar Selvaraj</span></p>I am a DevOps Engineer with 3+ years of experience in automating, optimizing, and securing cloud-based infrastructure. My expertise lies in CI/CD pipelines, containerization, orchestration, infrastructure as code (IaC), and cloud platforms like AWS and GCP. I have a strong background in implementing scalable and resilient architectures, ensuring high availability, and improving system reliability. Passionate about streamlining development workflows, I thrive on bridging the gap between development and operations to drive efficiency and innovation.</p>
                         <article>
                             <div className='year'>
                             <motion.span
@@ -382,7 +387,7 @@ function Home() {
                         ))}
                     </section>
                 </section>
-                        <ContactForm />
+                        {/* <ContactForm /> */}
                 <footer id='contactMe'>
                     <section>
                         <article>

@@ -2,51 +2,21 @@ import React from "react";
 import "./Skills.css"; // Import the CSS file for styling
 
 const skillsData = {
-  "Programming and Database": [
-    { name: "Shell Script", percentage: 80 },
-    { name: "Python", percentage: 60 },
-    { name: "MySQL", percentage: 70 }
+  "Programming and Database:": [
+    { name: "Shell Script, Python, MySQL", percentage: 80 }
   ],
-  "Operating System": [
-    { name: "Linux", percentage: 65 },
-    { name: "Windows", percentage: 95 }
+  "Operating System:": [
+    { name: "Linux, Windows", percentage: 65 }
   ],
-  "DevOps & Tools": [
-    { name: "JIRA", percentage: 75 },
-    { name: "Confluence", percentage: 75 },
-    { name: "Git", percentage: 85 },
-    { name: "GitHub", percentage: 75 },
-    { name: "Docker", percentage: 75 },
-    { name: "Jenkins", percentage: 75 },
-    { name: "GitHub Action", percentage: 75 },
-    { name: "Kubernetes", percentage: 75 },
-    { name: "Ansible", percentage: 75 },
-    { name: "Terraform", percentage: 75 },
-    { name: "SonarQube", percentage: 75 },
-    { name: "Checkov", percentage: 75 },
-    { name: "Nginx", percentage: 75 },
+  "DevOps & Tools:": [
+    { name: "JIRA, Confluence, Git, GitHub, Docker, Jenkins, GitHub Action, Kubernetes, Ansible, Terraform, SonarQube, Checkov, Nginx", percentage: 75 }
 
   ],
-  "AWS": [
-    { name: "IAM", percentage: 90 },
-    { name: "VPC", percentage: 80 },
-    { name: "EC2", percentage: 70 },
-    { name: "ECR", percentage: 85 },
-    { name: "EKS", percentage: 85 },
-    { name: "RDS", percentage: 85 },
-    { name: "S3", percentage: 85 },
-    { name: "Route53", percentage: 85 },
-    { name: "CloudWatch", percentage: 85 }
+  "AWS:": [
+    { name: "IAM, VPC, EC2, ECR, EKS, RDS, S3, Route53, CloudWatch", percentage: 90 }
   ],
-  "GCP": [
-    { name: "IAM", percentage: 90 },
-    { name: "VPC", percentage: 80 },
-    { name: "Compute Engine", percentage: 70 },
-    { name: "GCR", percentage: 85 },
-    { name: "Cloud Run", percentage: 85 },
-    { name: "GKE", percentage: 85 },
-    { name: "Cloud Storage", percentage: 85 },
-    { name: "Cloud SQL", percentage: 85 }
+  "GCP:": [
+    { name: "IAM, VPC, Compute Engine, GCR, Cloud Run, GKE, Cloud Storage, Cloud SQL", percentage: 90 }
   ]
 };
 
@@ -62,9 +32,9 @@ const Skills = () => {
               {skillsData[category].map((skill, i) => (
                 <div key={i} className="skill">
                   
-                    <ul>
-                      <li>{skill.name}</li>
-                    </ul>
+                   
+                      <p>{skill.name}</p>
+                   
 
                  
                  
