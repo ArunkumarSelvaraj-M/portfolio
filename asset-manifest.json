@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.675a2c06.css",
-    "main.js": "/portfolio/static/js/main.c01921e4.js",
+    "main.css": "/portfolio/static/css/main.838f3da7.css",
+    "main.js": "/portfolio/static/js/main.4c38c5b3.js",
     "static/media/autocloud.png": "/portfolio/static/media/autocloud.fe98b55f501934b1e220.png",
     "static/media/ArunkumarSelvaraj.jpg": "/portfolio/static/media/ArunkumarSelvaraj.0aa2e0ab4931f546aead.jpg",
     "static/media/network.png": "/portfolio/static/media/network.d7d003c706f2291f495c.png",
@@ -11,14 +11,18 @@
     "static/media/nalabatters.png": "/portfolio/static/media/nalabatters.51efb4c7bb98535886c8.png",
     "static/media/cloud-infrastructure.png": "/portfolio/static/media/cloud-infrastructure.5737f1474770337b25cb.png",
     "static/media/monitoring.png": "/portfolio/static/media/monitoring.5c1ba5bea435f2cbd916.png",
+    "static/media/kubernetes-architecture.png": "/portfolio/static/media/kubernetes-architecture.1c74bc0e3889722dca6a.png",
     "static/media/tiktik.png": "/portfolio/static/media/tiktik.bb68153bc08f00b54aa3.png",
     "static/media/Airbuzz.png": "/portfolio/static/media/Airbuzz.ce5cde9f441830107b5e.png",
+    "static/media/k8s-logo.png": "/portfolio/static/media/k8s-logo.60f8718256c72fcc7c10.png",
+    "static/media/pod.png": "/portfolio/static/media/pod.9a658e6888121ca613f1.png",
+    "static/media/workerNode.png": "/portfolio/static/media/workerNode.e7297669b048e8f22786.png",
     "index.html": "/portfolio/index.html",
-    "main.675a2c06.css.map": "/portfolio/static/css/main.675a2c06.css.map",
-    "main.c01921e4.js.map": "/portfolio/static/js/main.c01921e4.js.map"
+    "main.838f3da7.css.map": "/portfolio/static/css/main.838f3da7.css.map",
+    "main.4c38c5b3.js.map": "/portfolio/static/js/main.4c38c5b3.js.map"
   },
   "entrypoints": [
-    "static/css/main.675a2c06.css",
-    "static/js/main.c01921e4.js"
+    "static/css/main.838f3da7.css",
+    "static/js/main.4c38c5b3.js"
   ]
 }
